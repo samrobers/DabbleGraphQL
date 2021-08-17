@@ -9,10 +9,10 @@ const CountrySchema = new Schema({
   },
 
   Area: {
-    type: Integer,
+    type: Number,
   },
   Population: {
-    type: Integer,
+    type: Number,
   },
 });
 

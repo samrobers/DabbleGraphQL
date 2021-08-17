@@ -4,8 +4,8 @@ const typeDefs = gql`
   type Country_Model {
     Country: String
     Year: String
-    Area: Integer
-    Population: Integer
+    Area: Number
+    Population: Number
   }
   type Query {
     countries: [Country_Model]
