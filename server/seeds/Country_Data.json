@@ -4,9 +4,9 @@
 
     "Year": "2000",
 
-    "Area (square kilometres)": 28748,
+    "Area_km": 28748,
 
-    "Total population": 3401198
+    "Total_population": 3401198
   },
 
   {
@@ -14,9 +14,9 @@
 
     "Year": "2001",
 
-    "Area (square kilometres)": 28748,
+    "Area_km": 28748,
 
-    "Total population": 3073734
+    "Total_population": 3073734
   },
 
   {
@@ -24,9 +24,9 @@
 
     "Year": "2002",
 
-    "Area (square kilometres)": 28748,
+    "Area_km": 28748,
 
-    "Total population": 3093465
+    "Total_population": 3093465
   },
 
   {
@@ -34,8 +34,8 @@
 
     "Year": "2003",
 
-    "Area (square kilometres)": 28748,
+    "Area_km": 28748,
 
-    "Total population": 3111162
+    "Total_population": 3111162
   }
 ]

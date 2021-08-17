@@ -1,13 +1,13 @@
-const { Country_Model } = require("../models");
+const { Albania_Model } = require("../models");
 
 const resolvers = {
   Query: {
-    countries: async () => {
-      return await Country_Model.find();
+    all_albania_data: async () => {
+      return await Albania_Model.find();
     },
     count_by_id: async (parent, { _id }) => {
       console.log("Country by ID Resolver");
-      return await Country_Model.find({ _id }).populate("count_by_id");
+      return await Albania_Model.find({ _id }).populate("count_by_id");
     },
   },
 };

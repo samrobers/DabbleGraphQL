@@ -1,3 +1,3 @@
-const Country_Model = require("./Country_Model");
+const Albania_Model = require("./Albania_Model");
 
-module.exports = Country_Model;
+module.exports = Albania_Model;

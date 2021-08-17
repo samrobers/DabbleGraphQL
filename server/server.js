@@ -17,11 +17,12 @@ const server = new ApolloServer({
   resolvers,
 });
 server.applyMiddleware({ app });
-app.use(expres.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 db.once("open", () => {
   app.listen(PORT, () => {
     console.log(`You are listening on port ${PORT}`);
+    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
