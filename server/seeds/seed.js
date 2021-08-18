@@ -1,12 +1,11 @@
 const db = require("../config/connection");
-const Country_Model = require("../models");
-const CountryData = require("./Country_Data.json");
-
+const { AlbaniaModel } = require("../models");
+const AlbaniaData = require("./countryData.json");
 db.once("open", async () => {
-  await Country_Model.deleteMany({});
+  await AlbaniaModel.deleteMany({});
 
-  const Countries = await Country_Model.insertMany(CountryData);
+  const AlbaniaInfo = await AlbaniaModel.insertMany(AlbaniaData);
 
-  console.log("Countries seeded!");
+  console.log("Albania Data Seeded");
   process.exit(0);
 });

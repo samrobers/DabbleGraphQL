@@ -1,13 +1,20 @@
-const { Albania_Model } = require("../models");
+const { AlbaniaModel } = require("../models");
 
 const resolvers = {
   Query: {
-    all_albania_data: async () => {
-      return await Albania_Model.find();
+    allAlbaniaData: async () => {
+      return await AlbaniaModel.find({});
     },
-    count_by_id: async (parent, { _id }) => {
-      console.log("Country by ID Resolver");
-      return await Albania_Model.find({ _id }).populate("count_by_id");
+    albaniaById: async (parent, { albaniaId }) => {
+      return await AlbaniaModel.findOne({ _id: albaniaId });
+    },
+  },
+  Mutation: {
+    addData: async (parent, { country, year, areaKm, totalPopulation }) => {
+      return AlbaniaModel.create({ country, year, areaKm, totalPopulation });
+    },
+    removeData: async (parent, { albaniaId }) => {
+      return await AlbaniaModel.findOneAndDelete({ _id: albaniaId });
     },
   },
 };

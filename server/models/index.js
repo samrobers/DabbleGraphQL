@@ -1,3 +1,3 @@
-const Albania_Model = require("./Albania_Model");
+const AlbaniaModel = require("./AlbaniaModel");
 
-module.exports = Albania_Model;
+module.exports = { AlbaniaModel };

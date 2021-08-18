@@ -1,15 +1,24 @@
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
-  type Albania_Model {
-    Country: String
-    Year: String
-    Area: Int
-    Population: Int
+  type AlbaniaModel {
+    country: String
+    year: String
+    areaKm: Int
+    totalPopulation: Int
   }
   type Query {
-    all_albania_data: [Albania_Model]
-    count_by_id(countryId: String!): [Albania_Model]
+    allAlbaniaData: [AlbaniaModel]
+    albaniaById(albaniaId: ID!): AlbaniaModel
+  }
+  type Mutation {
+    removeData(albaniaId: ID!): AlbaniaModel
+    addData(
+      country: String!
+      year: String!
+      areaKm: Int!
+      totalPopulation: Int!
+    ): AlbaniaModel
   }
 `;
 
